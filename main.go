@@ -16,8 +16,8 @@ const prefix string = "tott"
 
 func main() {
 	godotenv.Load()
-	os.Getenv("BOT_TOKEN")
-	sess, err := discordgo.New("Bot MTE0OTk5NTYzMTg1NTgxMjYzOA.GpzBGW.L2YYAuMTUzVDzr_ftLlYgH_pIb4K9i7SyIg1t8")
+	token := os.Getenv("BOT_TOKEN")
+	sess, err := discordgo.New("Bot " + token)
 	if err != nil {
 		log.Fatal(err)
 	}
